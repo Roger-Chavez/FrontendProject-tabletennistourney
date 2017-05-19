@@ -1,0 +1,21 @@
+
+<div>
+  <div class = "form-group searchBarCol">    
+    <h3>Search For Players</h3>
+    <input class = "searchBar" type="text " class="form-control" placeholder="Search..." ng-model="playersSearch ">
+    <Hr>
+  </div>
+
+  <div class="row displayPlayers">
+    <div class="sample" ng-repeat="player in players | filter: playersSearch">
+      <div>
+        <a ui-sref= "showPlayer({id: {{ player.id }} })" ><h2 class = " text-center"> {{ player.firstName }} {{ player.lastName }}</h2></a>
+      </div>
+      <div>
+        <p><strong>Rating:</strong> {{ player.eloRank }}</p>
+        <p><strong>Win/Loss Ratio:</strong> {{ player.winLossRatio() }}</p>
+        <p><strong>Total Games:</strong> {{ player.totalGames() }}</p>
+      </div>
+    </div>
+  </div>
+</div>

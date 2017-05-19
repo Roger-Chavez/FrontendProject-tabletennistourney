@@ -1,0 +1,76 @@
+<div id="headerBar">
+  <div class="row">
+    <h1>Fixtures</h1>
+  </div>
+</div>
+
+<div class="container schedulesBody">
+  <!-- (ISAAC) FILTER BOX -->
+  <div class="filterContainer row">
+    <p><u>Filter By Player</u></p>
+    <select class="dropDownList" ng-model="userSearch">
+      <option class="playersList" value="{{a.firstName}}" ng-repeat="a in players">
+        {{a.firstName}} {{a.lastName}}
+      </option>
+    </select>
+    <button ng-click="userSearch = ''" type="button" class=" btn btn-primary restButton">
+      Reset Filters
+    </button>
+  </div>
+
+  <div class="row">
+    <p class="liveStream pull-right">Live stream avaliable</p>
+    <p class="leagueImage col-sm-6 pull-right"></p>
+  </div>
+
+  <div class="row playersMatchList">
+    <span class="col-sm-6 matchDate"><strong>Thursday 18 May 2017</strong></span>
+
+  </div>
+  <ul class="match text text-center">
+
+    <li ng-repeat="i in matchups | filter: userSearch">
+    <span class="PLAY">
+        <strong>
+          {{i.player1.firstName}} {{i.player1.lastName}}
+        </strong>
+        <span class="time">{{ today | date: "shortTime"}}</span>
+        <strong>
+          {{i.player2.firstName}} {{i.player2.lastName}}
+        </strong>
+    </span>
+
+      <span class="">
+        <img src="./images/pongTable.png" alt="" class="tableIcon">
+        <strong>Redwood Code Academy</strong>
+      </span>
+
+      <span class="text-right">Live On</span>
+      <img src="./images/tvLogo.png" class="tvChannle text-right">
+
+    </li>
+    <li></li>
+  </ul>
+
+  <table class="matchTable text text-center" ng-repeat="b in matchups | filter: userSearch">
+    <tr>
+      <td class="playerVsPlayer">
+        <strong>
+          {{b.player1.firstName}} {{b.player1.lastName}}
+        </strong></td>
+      <td class="gameTime">
+        <span class="time">{{ today | date: "shortTime"}}</span></td>
+      <td>
+        <strong>
+          {{b.player2.firstName}} {{b.player2.lastName}}
+        </strong></td>
+      <td>
+        <img src="./images/pongTable.png" alt="" class="tableIcon">
+        <strong>Redwood Code Academy</strong></td>
+      <td>
+        <span class="text-right">Live On</span>
+        <img src="./images/tvLogo.png" class="tvChannle text-right"></td>
+    </tr>
+  </table>
+
+</div>

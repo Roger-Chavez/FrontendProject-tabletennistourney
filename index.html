@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="pingPongApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ping Pong Tournament</title>
+
+ <!-- Google Font - Open Sans -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+
+  <!-- Font Awesome CDN 4.7.0 -->
+  <script src="https://use.fontawesome.com/f1bf129935.js"></script>
+
+  <!-- Bootstrap CDN 3.3.7 -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Bootstrap JavaScript CDN 3.3.7 -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./css/styles.css">
+
+  <!-- Angular CDN 1.5.7 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.min.js"></script>
+
+  <!-- Angular UI Router CDN 0.4.2 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
+
+</head>
+
+<body ng-cloak>
+
+  <!-- (ISAAC) This is Nav Bar -->
+  <header>
+    <img class="headerLogo" src="./images/headerLogo_B.png" alt="logo">
+    <div class="navBar">
+      <div class="teamBar"></div>
+      <div class="navItems">
+        <button type="button" class="btn btn-default btn-lg btnOne"><a ui-sref="home">Home</a></button>
+        <button type="button" class="btn btn-default btn-lg btnList"><a ui-sref="players">Players</a></button>
+        <button type="button" class="btn btn-default btn-lg btnList"><a ui-sref="newPlayer">Sign Up</a></button>
+        <button type="button" class="btn btn-default btn-lg btnList"><a ui-sref="schedules">Schedules</a></button>
+        <button type="button" class="btn btn-default btn-lg btnList"><a ui-sref="standings">Standings</a></button>
+        <button type="button" class="btn btn-default btn-lg pull-right btnSignIn"><a href="#">Sign In</a></button>
+        <button type="button"  ui-sref="players" class="btn btn-lg pull-right btnSearch"><i class="fa fa-search text-center pull-right" aria-hidden="true"></i></button>
+
+        <!-- <div class="matchDay">
+          <p>Matchday<strong> Live</strong></p>
+          <p class="nextText">Brought To You By</p>
+          <div class="rcaLogo">
+            <img src="./images/rcaLogo.png" alt="Redwood Code Academy">
+        </div>
+      </div> -->
+    </div>
+    </div>
+  </header>
+
+  <div ui-view></div>
+
+<!-- (ISAAC) This is the Footer -->
+  <footer class="mainFooter row">
+    <div class="sponsors">
+
+        <a  href="#">
+          <span class="logo"><img src="./images/Microsoft-Logo.png" alt=""></span>
+          <div class="type ">Lead Sponsor</div>
+        </a>
+        <a  href="#">
+          <span class="logoTwo"><img src="./images/Chase-Logo.png" alt=""></span>
+          <div class="type">Offical Bank</div>
+        </a>
+        <a  href="#">
+          <span class="logoThree"><img src="./images/Killerspin-Logo.jpeg" alt=""></span>
+          <div class="type">Offical Paddle</div>
+        </a>
+        <a  href="#">
+          <span class="logoFour"><img src="./images/Butterfly-Logo.png" alt=""></span>
+          <div class="type">Offial Ball</div>
+        </a>
+        <a  href="#">
+          <span class="logoFive"><img src="./images/Tiga-Logo.png" alt=""></span>
+          <div class="type">Offial Scorekeeper</div>
+        </a>
+    </div>
+
+  </footer>
+
+<!--module-->
+<script type="text/javascript" src="./app.js"></script>
+
+<!--services-->
+
+<script type="text/javascript" src="./services/homeService.js"></script>
+<script type="text/javascript" src="./services/standingsService.js"></script>
+<script type="text/javascript" src="./services/playersService.js"></script>
+<script type="text/javascript" src="./services/schedulesService.js"></script>
+
+<!--controllers-->
+<script type="text/javascript" src="./controllers/homeController.js"></script>
+<script type="text/javascript" src="./controllers/standingsController.js"></script>
+<script type="text/javascript" src="./controllers/playersController.js"></script>
+<script type="text/javascript" src="./controllers/schedulesController.js"></script> 
+
+</body>
+</html>

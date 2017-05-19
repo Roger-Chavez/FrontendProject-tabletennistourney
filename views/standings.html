@@ -1,0 +1,111 @@
+<!--When player services are ready to hook up-->
+<div ng-controller="standingsController" class="containerStandings">
+  <br>
+  <h1 class="subheading">2017 Regular Season Standings</h1>
+  
+  <div class="container">
+
+     <div class="panel searchBy col-md-1 box clearfix">
+            <h4><u>Search By</u></h4>
+            <div class="filterNames">
+              <a ng-click="myFilter = ''" href="">All Profiles</a>
+            </div>
+            <div class="filterNames">
+              <a ng-click="myFilter = {gender: 'female'}" href="">Top Women</a>
+            </div>
+            <div class="filterNames">
+              <a ng-click="myFilter = {gender: '!female'}" href="">Top Men</a>
+            </div>
+            <div class="filterNames">
+              <a ng-click="myFilter = lessThan('age', 18)" href="">Top Juniors</a>
+            </div>
+          </div>
+
+      <div class="panel bracket bracketStandings col-md-8">
+        <table class="table table-hover table-bordered">
+          <thead class="thead-inverse warning">
+            <th data-tablesaw-sortable-default-col class="tablesaw-sortable-descending theader">
+              <a class="columnSort tableHeaders" href="" ng-click="sortType = 'eloRank'; sortReverse = !sortReverse">First
+                <span ng-show="sortType== 'firstName' && !sortReverse" class="fa fa-caret-down"></span>
+                <span ng-show="sortType== 'firstName' && sortReverse" class="fa fa-caret-up">
+            </th>
+            <th class="tablesaw-sortable-descending theader">
+              <a href="" class="columnSort tableHeaders" ng-click="sortType = 'lastName'; sortReverse = !sortReverse">Last
+                <span ng-show="sortType== 'lastName' && !sortReverse" class="fa fa-caret-down"></span>
+                <span ng-show="sortType== 'lastName' && sortReverse" class="fa fa-caret-up">
+            </th>
+            <th class="tablesaw-sortable-descending theader">
+              <a class="columnSort tableHeaders" href="" ng-click="sortType = 'wins'; sortReverse = !sortReverse">Wins
+                <span ng-show="sortType== 'wins' && !sortReverse" class="fa fa-caret-down"></span>
+                <span ng-show="sortType== 'wins' && sortReverse" class="fa fa-caret-up">
+            </th>
+            <th class="tablesaw-sortable-descending theader">
+              <a class="columnSort tableHeaders" href="" ng-click="sortType = 'losses'; sortReverse = !sortReverse">Losses
+                <span ng-show="sortType== 'losses' && !sortReverse" class="fa fa-caret-down"></span>
+                <span ng-show="sortType== 'losses' && sortReverse" class="fa fa-caret-up">
+            </th>
+            <th class="tablesaw-sortable-descending theader">
+              <a class="columnSort tableHeaders" href="" ng-click="sortType = 'eloRank'; sortReverse = !sortReverse">ELO Score
+                <span ng-show="sortType== 'eloRank' && !sortReverse" class="fa fa-caret-down"></span>
+                <span ng-show="sortType== 'eloRank' && sortReverse" class="fa fa-caret-up">
+            </th>
+          </thead>
+            <tbody ng-repeat= "player in players | orderBy:sortType:sortReverse | filter:myFilter">
+              <tr class=playerRow>
+                  <td> {{player.firstName}} </td>
+                  <td> {{player.lastName}} </td>
+                  <td> {{player.wins}}</td>
+                  <td> {{player.losses}}</td>
+                  <td> {{player.eloRank}} </td>
+              </tr>
+            </tbody> 
+          </table>
+        </div>
+
+          <!--(sp) input section for player names, score-->
+          <div class="panel col-sm-1 gameInfo">
+            <label>Game Stats</label>
+                <div>
+                  <label for="name">Player One</label>
+                      <select placeholder="Player One" class="option" ng-model="player1">
+                        <option placeholder="Player One" ng-repeat = "player in players" value={{player.id}}> {{player.firstName}} {{player.lastName}} </option>
+                      </select>
+                </div>
+                <div>
+                  <label for="name">Player Two</label>
+                    <select class="option" ng-model="player2" placeholder="Player One">
+                      <option  class="option" placeholder="Player One" ng-repeat="player in players" value={{player.id}}>  {{player.firstName}} {{player.lastName}} </option>
+                    </select>
+                </div>
+              <div class="scoreInput col-md-3">
+                <div class="scoreDiv">
+                  <label for="scr">Score P1</label>
+                  <input class="scoreBackground" type="number" placeholder="P1" ng-model="scorePlayerOne">
+                </div>
+                <div class="scoreDiv">
+                  <label for="scr">Score P2</label>
+                  <input class="scoreBackground" type="number" placeholder="P2" ng-model="scorePlayerTwo">
+                </div>
+              </div>
+                <button class="btnLog btn-info center" ng-click="logInfo()">Add results</button>
+              
+            
+          </div>
+
+          <!--<div class="searchBy col-md-2 box clearfix">
+            <p>Search By</p>
+            <div>
+              <a ng-click="myFilter = ''" href="">All Profiles</a>
+            </div>
+            <div>
+              <a ng-click="myFilter = {gender: 'female'}" href="">Top Women</a>
+            </div>
+            <div>
+              <a ng-click="myFilter = {gender: '!female'}" href="">Top Men</a>
+            </div>
+            <div>
+              <a ng-click="myFilter = lessThan('age', 18)" href="">Top Juniors</a>
+            </div>
+          </div>-->
+  </div>
+</div>

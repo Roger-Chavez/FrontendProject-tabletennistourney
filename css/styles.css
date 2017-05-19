@@ -1,0 +1,614 @@
+.col-container {
+    padding:0 5px;
+    margin: 8% 5%;
+}
+.playerTextBox {
+    background: rgba(40, 107, 175, 0.71);
+    height: 230px;
+    border-radius: 5px;
+    color: white;
+}
+.playerBanner {
+    background-color: #286baf;
+    text-align: center;
+    font-weight: 500;
+    padding: 20px;
+    color: #fff;
+}
+.playerText{
+    font-size: 2rem;
+}
+.textMargin{
+    margin-bottom: 0rem;
+}
+.playerMargin {
+    margin:0;
+    background: #d6e3ec;
+    color:#286baf;
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+    border-top: 3px solid #286baf;
+    border-bottom: 3px solid #286baf;
+    background-image: url(../images/table_t.png);
+   background-repeat: repeat;
+   height:800px;
+}
+.playerbtn{
+    width: 96%;
+    margin-top: 40px;
+    margin-left: 13px;
+    height: 60px;
+    background:#286baf;
+    }
+.playerbtn2{
+    width: 96%;
+    margin-top: 40px;
+    margin-left: 13px;
+    height: 60px;
+    background: #73acae;
+    }
+.form-card{
+  background:white;
+  border-radius: 5px;
+  color: grey;
+  border: 3px solid #286baf;
+}
+.sample{
+    border-radius: 5px;
+    background: #f5f5f5;
+    width:30%;
+    height:230px;
+    padding: 25px;
+    margin:10px;
+    float: left;
+    border: 3px solid #286baf;
+    }
+.searchBarCol {
+    padding-left: 102px;
+    width: 100%;
+    margin-top: -19px;
+    background: #286baf;
+    padding-top: 23px;
+    color: white;
+}
+.searchBar {
+   background:#f5f5f5;
+    width:92%;
+    border-radius: 5px;
+    color:black;
+}
+.displayPlayers {
+    padding:20px;
+    background:white;
+    margin-top: -19px;
+    padding-left: 105px;
+}
+
+/*(shawn) standings page*/
+
+.bracketStandings {
+  margin-bottom: 30px;
+  text-align: center;
+  margin-left: 50px;
+  margin-top: 100px;
+  font-size: 20px;
+  align-content: center;
+}
+
+.gameInfo { 
+  float: right;
+  position: fixed;
+  width: 12%;
+  top: 33%;
+  right: 25%;
+  border: 2px solid black;
+  color: black;
+  padding: 5px;
+  background-color: #66DB60;
+}
+
+.scoreBackground {
+  background-color: teal;
+  color: white;
+      width: 17%;
+    margin-left: 21px;
+}
+
+.option {
+  background-color: teal;
+  color: white;
+}
+
+.score {
+  margin-top: 25px;
+}
+
+.tableHeaders {
+  text-align: center;
+  color: black;
+}
+
+.btn-info {
+    color: #fff;
+    background-color: #5bc0de;
+    border-color: #46b8da;
+    width: 25%;
+    margin-left: -68px;
+    margin-top: 3px;
+}
+
+
+.searchBy {
+  float:left;
+  clear: left;
+  margin-left: -180px;
+  height: 180px;
+  top: 33%;
+  position: fixed;
+  text-align: center;
+  font-family: barrio;
+  border: 2px solid black;
+  color: black;
+  padding: 5px;
+  background-color: #66DB60;
+  font-family: abril-fatface;
+}
+
+.filterNames {
+  padding-top: 10px;
+  font-family: abril-fatface;
+
+}
+
+/*body {
+  background-image: url("http://wallpapersdsc.net/wp-content/uploads/2015/09/Ping_Pong_HD_51.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}*/
+.containerStandings {
+  background-image: url("http://wallpapersdsc.net/wp-content/uploads/2015/09/Ping_Pong_HD_51.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: 100%; 
+  }
+
+.columnSort {
+  text-align: center;
+}
+
+.scoreInput {
+  width:90%;
+}
+.thead-inverse {
+  font-size: 18px
+}
+
+.table-hover {
+  background-color: teal;
+  border-collapse: separate;
+}
+
+.theader {
+ background-color: #66DB60
+}
+
+
+.subheading {
+ color: white;
+ background-color: #EC575B;
+ width: 100%;
+ font-family: abril-fatface;
+ padding: 15px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: 'Open Sans', sans-serif;
+}
+/*(Roger) User show Page*/
+.userPic{
+  margin-top: 75px;
+  margin-left: 12px;
+}
+.showUser{
+   margin-left: 85px;
+}
+.showMenu {
+  padding: 0;
+  margin-top: 2px;
+}
+.showInfo{
+  margin-top: -50px;
+}
+.showImg {
+  width: 195px;
+  border-radius: 5px;
+}
+.showList {
+  background: #286baf;
+  width: 190px;
+  list-style-type: none;
+  padding: 2px;
+  padding-left: 19px;
+  /*border-top-right-radius: 5px;*/
+  border-bottom-right-radius: 5px;
+  height:500px;
+}
+.showLinks{
+    text-align: center;
+    background: white;
+    width: 145px;
+    border-radius: 5px;
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-top: 32px;
+}
+.showCard {
+  background: #f5f5f5;
+  margin-top: 2px;
+  height: 500px;
+  /*border-top-left-radius: 5px;*/
+  border-bottom-left-radius: 5px;
+}
+.showLinks:hover {
+   border-left: 3px solid red;
+   border-right: 3px solid red;
+   /*border-bottom: 3px solid red;*/
+}
+.showText {
+  color:#286baf;
+}
+/*.star-ratings-css {
+  unicode-bidi: bidi-override;
+  color: #c5c5c5;
+  font-size: 25px;
+  height: 25px;
+  width: 100px;
+  margin: 0 auto;
+  position: relative;
+  padding: 0;
+  text-shadow: 0px 1px 0 #a2a2a2;
+}
+  .star-ratings-css-top {
+    color: #e7711b;
+    padding: 0;
+    position: absolute;
+    z-index: 1;
+    display: block;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+  }
+  .star-ratings-css-bottom {
+    padding: 0;
+    display: block;
+    z-index: 0;
+  }*/
+
+/*(ISAAC) CSS for Nav Bar*/
+.headerLogo {
+  width: 140px;
+  height: 100px;
+  position: absolute;
+}
+
+.navBar {
+  background-color: #393737;
+  width: auto;
+  height: 100px;
+}
+
+.teamBar {
+  background-color: white;
+  width: auto;
+  height: 50px;
+}
+.navItems {
+  background-color: #286baf;
+  width: auto;
+  height: 50px;
+}
+
+.btnOne {
+  margin-left: 150px;
+}
+
+.btnList {
+  margin-left: 50px;
+}
+
+.navItems button {
+  display: inline;
+  margin-top: 0;
+  height: 50px;
+  background-color:#286baf;
+  border-color: transparent;
+}
+
+.btn-default:hover {
+  color: white;
+  background-color: transparent;
+  border-color: transparent;
+  border-bottom: 2px solid red;
+  border-radius: 0;
+}
+.btn-default.active, .btn-default:active {
+  color: white;
+  background-color: transparent;
+  border-color: transparent;
+  border-bottom: 2px solid red;
+
+  border-radius: 0;
+}
+
+.btn-default.active.focus, .btn-default.active:focus, .btn-default.active:hover, .btn-default:active.focus, .btn-default:active:focus, .btn-default:active:hover, .open>.dropdown-toggle.btn-default.focus, .open>.dropdown-toggle.btn-default:focus, .open>.dropdown-toggle.btn-default:hover {
+  color: white;
+  background-color: transparent;
+  border-color: transparent;
+  border-bottom: 2px solid red;
+  border-radius: 0;
+}
+
+.navItems a {
+  color: white;
+  text-decoration: none;
+}
+
+.btnSearch i{
+  color: white;
+  font-size: 25px;
+}
+
+.btnSignIn {
+  margin-right: 20px;
+  margin-left: 20px;
+  border-bottom: none;
+}
+
+.matchDay {
+  color: white;
+  font-size: 27px;
+  background-color: #474545;
+  width: auto;
+  height: 50px;
+}
+
+.matchDay p {
+  display: inline;
+  margin-left: 20px;
+  margin-top: 25px;
+}
+
+.nextText {
+  color: white;
+  font-size: 12px;
+  margin-left: 20px;
+}
+
+.rcaLogo {
+  display: inline;
+}
+
+.rcaLogo img {
+  height: 40px;
+}
+
+/*(ISAAC) This is the footer Style*/
+footer {
+  width: auto;
+  height: 200px;
+  background-color: white;
+}
+
+.sponsors {
+  margin-left: 20%;
+  margin-top: 2%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sponsors a{
+  padding-left: 20px;
+}
+
+.logo img{
+  margin-top: 20px;
+  height: 100px;
+  width: 200px;
+}
+.logoTwo img{
+  margin-top: 20px;
+  height: 100px;
+  width: 125px;
+}
+.logoThree img{
+  margin-top: 20px;
+  height: 100px;
+  width: 125px;
+}
+.logoFour img{
+  margin-top: 70px;
+  margin-left: -50px;
+  height: 50px;
+  width: 175px;
+}
+.logoFive img{
+  margin-top: 70px;
+  height: 50px;
+  width: 175px;
+}
+
+.type {
+  margin-right: 75px;
+  padding-left: 20px;
+}
+
+#headerBar {
+  width: auto;
+  height: 150px;
+  color: white;
+  background-color: #393737;
+  background-image: url(../images/page-hero.png);
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+}
+
+#headerBar h1 {
+  padding-left: 10%;
+  padding-top: 50px;
+}
+
+.schedulesBody {
+  background-color: lightgray;
+  width: auto;
+  height: 50%;
+  margin: 0 10%;
+}
+
+.filterContainer>p {
+  margin-left: 12%;
+  margin-top: 2%;
+  position: absolute;
+}
+
+.filterContainer>button {
+  margin-top:0;
+  margin-left: 1%;
+}
+
+.liveStream {
+  margin-right: 15%;
+}
+
+.leagueImage {
+  margin-top: 1%;
+  margin-bottom: -6%;
+  margin-right: -12%;
+}
+
+.playersMatchList {
+  margin-top: 4%;
+}
+
+.matchDate {
+  margin-bottom: -2%;
+  margin-left: 5%;
+  font-size: 20px;
+  color: #5a5757;
+}
+
+.match {
+  list-style-type: none;
+  margin: 0 5%;
+}
+
+.dropDownList {
+  margin-left: 13%;
+  margin-top: 4%;
+  border: 0;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.playersList {
+  color: green;
+  display: inline;
+}
+.dropdown-menu {
+  margin-left: 16%;
+  background-color: rgba(0, 0, 0, 0);
+  box-shadow: none;
+  min-width: 178px;
+  padding-left: 15px;
+  font-size: 18px;
+}
+.playerName {
+  padding-bottom: 3px;
+  color: red;
+}
+
+.leagueImage {
+  background:url(../images/league.png) no-repeat;
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 100px;
+  display: block;
+}
+
+
+
+.match>li {
+  border-bottom: 1px solid red;
+  height: 40px;
+}
+
+.matchTable tr td {
+  border: 1px solid black;
+  margin: 0;
+  width: 40%;
+  display: inline;
+}
+
+.matchTable td {
+  border: 1px;
+}
+
+.playerVsPlayer {
+  padding-right: 5%;
+}
+
+.gameTime {
+  padding: 0 1%;
+}
+
+.time {
+  width: 20px;
+  height: 20px;
+  background-color: gray;
+  color: white;
+}
+
+.tableIcon {
+  width: 20px;
+  height: 13px;
+  margin: 20px 13px;
+}
+
+.tvChannle {
+  width: 54px;
+  height: 12px;
+  margin: 54px 12px;
+}
+
+
+
+/*(Roger) CSS for the home page*/
+.wrapper {
+    /*background: green;*/
+    height:1000px;
+    max-width: 1240px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    float:left;
+}
+.fixedSidebar {
+  height:1000px;
+    border: 1px solid #e8e8e8;
+    border-bottom: 0;
+    position: relative;
+    padding: 2.3rem 1rem 2rem;
+    background: #fff;
+    text-align: center;
+}
+.schedulesHeader{
+height:150px;
+background: yellow;
+}
