@@ -24,21 +24,10 @@ angular
     for (var i = 0;i < $scope.players.length; i++) {
       $scope.matchups.push(new Matchup(getRandomPlayer(), getRandomPlayer()));
     }
-
-
     // (ISAAC)This gives us a date
       $scope.today = new Date();
 
      $scope.random = function() {
          return Math.random();
      }
-
-
-    //  $scope.randomName = $scope.players[Math.floor(Math.random() * $scope.players.length)];
-
-
-  //    $scope.orderByMe = function(x) {
-  //      $scope.myOrderBy = x;
-  //  }
-
   })
