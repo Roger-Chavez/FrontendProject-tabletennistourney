@@ -213,7 +213,7 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 /*(Roger) User show Page*/
-.userPic{
+.showUser div{
   margin-top: 75px;
   margin-left: 12px;
 }

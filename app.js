@@ -5,11 +5,11 @@ app.config(function ($stateProvider, $urlRouterProvider) {
   $urlRouterProvider.otherwise("/");
 
   $stateProvider
-    .state("home", {
-      url: "/",
-      templateUrl: "./views/home.html",
-      controller: "homeController"
-    })
+    // .state("home", {
+    //   url: "/",
+    //   templateUrl: "./views/home.html",
+    //   controller: "homeController"
+    // })
 
     //Roger: This is where the users are made.
     .state("players", {
@@ -18,8 +18,8 @@ app.config(function ($stateProvider, $urlRouterProvider) {
       controller: "playersController"
     })
     //Roger: This is where they're profiles are displayed.    
-    .state("newPlayer", {
-      url: "/players/new",
+    .state("home", {
+      url: "/",
       templateUrl: "./views/users_form.html",
       controller: "playersController"
     })

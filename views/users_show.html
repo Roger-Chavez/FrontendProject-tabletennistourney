@@ -4,7 +4,7 @@
             <div class="col-xs-4">
                 <div class="showUser">
                     <h1> {{player.firstName}} {{player.lastName}} </h1>
-                    <div class="userPic">
+                    <div>
                         <img class="showImg" src="{{player.img}}" alt="userImg" />
                     </div>
                 </div>
@@ -17,7 +17,7 @@
                 </div>
                 <div class="row col-container">
                     <div class="col-xs-6">
-                        <p><span><strong>Elo Score: </strong></span>{{player.eloRank}} </p>
+                        <p><strong>Elo Score: </strong>{{player.eloRank}} </p>
                     </div>
                     <div class="col-xs-6">
                         <p><span><strong>Player Win Percentage: </strong></span>{{player.winLossRatio()}} </p>
@@ -45,7 +45,7 @@
         </div>
         <div class="showMenu col-xs-2">
             <ul class="showList">
-                <a ui-sref="editPlayer({id: {{player.id}} })">
+                <a ng-click="editPlayer({id: player.id })">
                     <li class="showLinks"><span class="showText">Update</span></li>
                 </a>
                 <a ng-click="deletePlayer()">
