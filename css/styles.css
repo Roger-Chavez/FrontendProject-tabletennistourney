@@ -1,3 +1,7 @@
+.required{
+  color:red;
+  font-size: 11px;
+}
 .col-container {
     padding:0 5px;
     margin: 8% 5%;
@@ -13,7 +17,9 @@
     text-align: center;
     font-weight: 500;
     padding: 20px;
-    color: #fff;
+    color:white;
+    border-bottom: 1px solid;
+    font-size: 18px; 
 }
 .playerText{
     font-size: 2rem;
@@ -51,7 +57,7 @@
   background:white;
   border-radius: 5px;
   color: grey;
-  border: 3px solid #286baf;
+  border: 1px solid #286baf;
 }
 .sample{
     border-radius: 5px;
@@ -83,101 +89,77 @@
     margin-top: -19px;
     padding-left: 105px;
 }
-
 /*(shawn) standings page*/
-
 .bracketStandings {
-  margin-bottom: 30px;
   text-align: center;
-  margin-left: 50px;
-  margin-top: 100px;
   font-size: 20px;
   align-content: center;
 }
-
-.gameInfo { 
-  float: right;
-  position: fixed;
-  width: 12%;
-  top: 33%;
-  right: 25%;
+.gameInfo {
+  width: 17%;
   border: 2px solid black;
   color: black;
-  padding: 5px;
   background-color: #66DB60;
 }
-
 .scoreBackground {
   background-color: teal;
   color: white;
-      width: 17%;
-    margin-left: 21px;
+  width: 17%;
+  margin-left: 21px;
 }
-
 .option {
   background-color: teal;
   color: white;
 }
-
 .score {
   margin-top: 25px;
 }
-
 .tableHeaders {
   text-align: center;
   color: black;
 }
 
 .btn-info {
-    color: #fff;
-    background-color: #5bc0de;
-    border-color: #46b8da;
-    width: 25%;
-    margin-left: -68px;
-    margin-top: 3px;
+  color: #fff;
+  background-color: #5bc0de;
+  border-color: #46b8da; 
+  width: 100%;
 }
-
-
 .searchBy {
-  float:left;
-  clear: left;
-  margin-left: -180px;
-  height: 180px;
-  top: 33%;
-  position: fixed;
-  text-align: center;
+  margin-left: 80px;
+  height:100%;
   font-family: barrio;
   border: 2px solid black;
   color: black;
   padding: 5px;
   background-color: #66DB60;
-  font-family: abril-fatface;
 }
-
 .filterNames {
   padding-top: 10px;
   font-family: abril-fatface;
-
 }
-
-/*body {
-  background-image: url("http://wallpapersdsc.net/wp-content/uploads/2015/09/Ping_Pong_HD_51.jpg");
-  background-repeat: no-repeat;
-  background-size: 100%;
-}*/
 .containerStandings {
   background-image: url("http://wallpapersdsc.net/wp-content/uploads/2015/09/Ping_Pong_HD_51.jpg");
   background-repeat: no-repeat;
   background-size: contain;
-  background-size: 100%; 
+  background-size: 100%;
   }
-
 .columnSort {
   text-align: center;
 }
-
 .scoreInput {
-  width:90%;
+  width:100%;
+}
+.scoreDiv{
+  margin-top: 10px;
+  width:100%
+}
+.scoreDiv2{
+  margin-top: 10px;
+  width:100%  
+}
+.submitScoreDiv{
+  width:100%;
 }
 .thead-inverse {
   font-size: 18px
@@ -191,44 +173,43 @@
 .theader {
  background-color: #66DB60
 }
-
-
 .subheading {
  color: white;
  background-color: #EC575B;
  width: 100%;
  font-family: abril-fatface;
  padding: 15px;
+ text-align: center;
 }
 
+
+}
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
-
 body {
   font-size: 14px;
   font-weight: 400;
   font-family: 'Open Sans', sans-serif;
 }
 /*(Roger) User show Page*/
-.showUser div{
-  margin-top: 75px;
-  margin-left: 12px;
+.userPic{
+  margin-top: 40px;
 }
 .showUser{
-   margin-left: 85px;
+   margin-left: 15px;
 }
 .showMenu {
   padding: 0;
   margin-top: 2px;
 }
 .showInfo{
-  margin-top: -50px;
+  margin-top: -35px;
 }
 .showImg {
-  width: 195px;
+  width: 230px;
   border-radius: 5px;
 }
 .showList {
@@ -265,46 +246,17 @@ body {
 .showText {
   color:#286baf;
 }
-/*.star-ratings-css {
-  unicode-bidi: bidi-override;
-  color: #c5c5c5;
-  font-size: 25px;
-  height: 25px;
-  width: 100px;
-  margin: 0 auto;
-  position: relative;
-  padding: 0;
-  text-shadow: 0px 1px 0 #a2a2a2;
-}
-  .star-ratings-css-top {
-    color: #e7711b;
-    padding: 0;
-    position: absolute;
-    z-index: 1;
-    display: block;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-  }
-  .star-ratings-css-bottom {
-    padding: 0;
-    display: block;
-    z-index: 0;
-  }*/
-
 /*(ISAAC) CSS for Nav Bar*/
 .headerLogo {
   width: 140px;
   height: 100px;
   position: absolute;
 }
-
 .navBar {
   background-color: #393737;
   width: auto;
   height: 100px;
 }
-
 .teamBar {
   background-color: white;
   width: auto;
@@ -315,7 +267,6 @@ body {
   width: auto;
   height: 50px;
 }
-
 .btnOne {
   margin-left: 150px;
 }
@@ -336,15 +287,14 @@ body {
   color: white;
   background-color: transparent;
   border-color: transparent;
-  border-bottom: 2px solid red;
+  border-bottom: 2px solid white;
   border-radius: 0;
 }
 .btn-default.active, .btn-default:active {
   color: white;
   background-color: transparent;
   border-color: transparent;
-  border-bottom: 2px solid red;
-
+  border-bottom: 2px solid blue !important;
   border-radius: 0;
 }
 
@@ -352,7 +302,7 @@ body {
   color: white;
   background-color: transparent;
   border-color: transparent;
-  border-bottom: 2px solid red;
+  border-bottom: 2px solid blue;
   border-radius: 0;
 }
 
@@ -402,54 +352,63 @@ body {
 
 /*(ISAAC) This is the footer Style*/
 footer {
-  width: auto;
-  height: 200px;
-  background-color: white;
+  background-image: url(../images/footer-left.png),url(../images/footer-right.png);
+  background-position: 0 100%,100% 0;
+  background-repeat: no-repeat;
 }
 
 .sponsors {
-  margin-left: 20%;
-  margin-top: 2%;
+  margin-top: 7%;
   display: flex;
-  flex-wrap: wrap;
+}
+.sponsors a {
+  margin-right: 7%
 }
 
-.sponsors a{
-  padding-left: 20px;
+.microsoftLogo {
+  background: url(../images/Microsoft-Logo.png) no-repeat;
+  background-size: contain;
+  padding-top: 8%;
+  padding-right: 4%;
+  margin-right: 5%;
+  border-right: 1px solid #286baf;
 }
 
-.logo img{
-  margin-top: 20px;
-  height: 100px;
-  width: 200px;
-}
-.logoTwo img{
-  margin-top: 20px;
-  height: 100px;
-  width: 125px;
-}
-.logoThree img{
-  margin-top: 20px;
-  height: 100px;
-  width: 125px;
-}
-.logoFour img{
-  margin-top: 70px;
-  margin-left: -50px;
-  height: 50px;
-  width: 175px;
-}
-.logoFive img{
-  margin-top: 70px;
-  height: 50px;
-  width: 175px;
+.chaseLogo {
+  background: url(../images/Chase-Logo.png) no-repeat;
+  background-size: contain;
+  height: 98px;
+  padding-top: 8%;
+  margin-right: 3%;
 }
 
-.type {
-  margin-right: 75px;
-  padding-left: 20px;
+.paddleLogo {
+  background: url(../images/Killerspin-Logo.png) no-repeat;
+  background-size: contain;
+  height: 98px;
+  padding-top: 8%;
+  margin-right: 3%;
 }
 
+.butterflyLogo {
+  background: url(../images/Butterfly-Logo.png) no-repeat;
+  background-size: contain;
+  height: 98px;
+  padding-top: 8%;
+  padding-right: 4%;
+  margin-right: 3%;
+}
+
+.tigaLogo {
+  background: url(../images/Tiga-Logo.png) no-repeat;
+  background-size: contain;
+  height: 98px;
+  padding-top: 8%;
+  padding-right: 4%;
+  margin-right: 3%;
+}
+
+/*(ISAAC) Schedule PAGE*/
 #headerBar {
   width: auto;
   height: 150px;
@@ -466,7 +425,6 @@ footer {
 }
 
 .schedulesBody {
-  background-color: lightgray;
   width: auto;
   height: 50%;
   margin: 0 10%;
@@ -498,7 +456,7 @@ footer {
 }
 
 .matchDate {
-  margin-bottom: -2%;
+  margin-bottom: 1%;
   margin-left: 5%;
   font-size: 20px;
   color: #5a5757;
@@ -541,18 +499,24 @@ footer {
   display: block;
 }
 
-
-
 .match>li {
   border-bottom: 1px solid red;
   height: 40px;
 }
 
+.topBorder {
+  border-top: 3px solid rgba(40, 107, 175, 0.65);
+
+}
+
 .matchTable tr td {
-  border: 1px solid black;
+  /*border-bottom: 3px solid rgba(40, 107, 175, 0.65);*/
   margin: 0;
-  width: 40%;
-  display: inline;
+  width: 21%;
+  /* height: 5%; */
+  padding: 0 45px 1px 45px;
+  margin: 0 1px;
+  /* height: 0%; */
 }
 
 .matchTable td {
@@ -568,8 +532,7 @@ footer {
 }
 
 .time {
-  width: 20px;
-  height: 20px;
+  padding: 0px 10px;
   background-color: gray;
   color: white;
 }
@@ -581,9 +544,14 @@ footer {
 }
 
 .tvChannle {
-  width: 54px;
-  height: 12px;
-  margin: 54px 12px;
+  width: 50%;
+  height: 17px;
+  padding-right: 5px;
+}
+
+.tvText {
+  font-size: 9px;
+  padding-right: 5px;
 }
 
 
