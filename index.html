@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="pingPongApp">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Ping Pong Tournament</title>
-
- <!-- Google Font - Open Sans -->
+  <!-- Google Font - Open Sans -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
 
   <!-- Font Awesome CDN 4.7.0 -->
   <script src="https://use.fontawesome.com/f1bf129935.js"></script>
 
   <!-- Bootstrap CDN 3.3.7 -->
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
 
   <!-- Bootstrap JavaScript CDN 3.3.7 -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -35,63 +36,85 @@
   <!-- (ISAAC) This is Nav Bar -->
   <header>
     <img class="headerLogo" src="./images/headerLogo_B.png" alt="logo">
-    <div class="navBar">
-      <div class="teamBar"></div>
-      <div class="navItems">
-        <button type="button" class="btn btn-default btn-lg btnOne"><a ui-sref="home">Home</a></button>
-        <button type="button" class="btn btn-default btn-lg btnList"><a ui-sref="players">Players</a></button>
-        <button type="button" class="btn btn-default btn-lg btnList"><a ui-sref="schedules">Schedules</a></button>
-        <button type="button" class="btn btn-default btn-lg btnList"><a ui-sref="standings">Standings</a></button>
-        <button type="button" class="btn btn-default btn-lg pull-right btnSignIn"><a href="#">Sign In</a></button>
-        <button type="button"  ui-sref="players" class="btn btn-lg pull-right btnSearch"><i class="fa fa-search text-center pull-right" aria-hidden="true"></i></button>
-
-    
+    <div class="whiteBar clearfix">
+      <nav class="topMenu clearfix">
+        <ul class="signIn">
+          <li><a href="#">Sign In</a></li>
+          <li><a ui-sref="players"><i class="fa fa-search"></i></a></li>
+        </ul>
+      </nav>
     </div>
-    </div>
+    <nav class="mainMenu clearfix">
+      <ul>
+        <li><a ui-sref="home">Home</a></li>
+        <li><a ui-sref="players">Players</a></li>
+        <li><a ui-sref="schedules">Schedules</a></li>
+        <li><a ui-sref="standings">Standings</a></li>
+      </ul>
+    </nav>
   </header>
 
   <div ui-view></div>
 
-<!-- (ISAAC) This is the Footer -->
-  <footer class="mainFooter row">
-    <div class="sponsors">
-
-        <a  href="#">
-          <span class="logo"><img src="./images/Microsoft-Logo.png" alt=""></span>
-          <div class="type ">Lead Sponsor</div>
+  <!-- (ISAAC) This is the Footer -->
+  <footer class="clearfix">
+    <ul>
+      <li>
+        <a href="#">
+          <figure class="photo">
+            <img class="logo1" alt="microsoftLogo" />
+            <figcaption>Lead Sponsor</figcaption>
+          </figure>
         </a>
-        <a  href="#">
-          <span class="logoTwo"><img src="./images/Chase-Logo.png" alt=""></span>
-          <div class="type">Offical Bank</div>
+      </li>
+      <li>
+        <a href="#">
+          <figure class="photo">
+            <img class="logo2" alt="chaseLogo" />
+            <figcaption>Official Bank</figcaption>
+          </figure>
         </a>
-        <a  href="#">
-          <span class="logoThree"><img src="./images/Killerspin-Logo.jpeg" alt=""></span>
-          <div class="type">Offical Paddle</div>
+      </li>
+      <li>
+        <a href="#">
+          <figure class="photo">
+            <img  class="logo3" alt="killerspinLogo" />
+            <figcaption>Official Paddle</figcaption>
+          </figure>
         </a>
-        <a  href="#">
-          <span class="logoFour"><img src="./images/Butterfly-Logo.png" alt=""></span>
-          <div class="type">Offial Ball</div>
+      </li>
+      <li>
+        <a href="#">
+          <figure class="photo">
+            <img class="logo4" alt="butterflyLogo" />
+            <figcaption>Official Ball</figcaption>
+          </figure>
         </a>
-        <a  href="#">
-          <span class="logoFive"><img src="./images/Tiga-Logo.png" alt=""></span>
-          <div class="type">Offial Scorekeeper</div>
+      </li>
+      <li>
+        <a href="#">
+          <figure class="photo">
+            <img  class="logo5" alt="stigaLogo" />
+            <figcaption>Official ScoreKeeper</figcaption>
+          </figure>
         </a>
-    </div>
-
+      </li>
+    </ul>
   </footer>
 
-<!--module-->
-<script type="text/javascript" src="./app.js"></script>
+  <!--module-->
+  <script type="text/javascript" src="./app.js"></script>
 
-<!--services-->
-<script type="text/javascript" src="./services/standingsService.js"></script>
-<script type="text/javascript" src="./services/playersService.js"></script>
-<script type="text/javascript" src="./services/schedulesService.js"></script>
+  <!--services-->
+  <script type="text/javascript" src="./services/standingsService.js"></script>
+  <script type="text/javascript" src="./services/playersService.js"></script>
+  <script type="text/javascript" src="./services/schedulesService.js"></script>
 
-<!--controllers-->
-<script type="text/javascript" src="./controllers/standingsController.js"></script>
-<script type="text/javascript" src="./controllers/playersController.js"></script>
-<script type="text/javascript" src="./controllers/schedulesController.js"></script> 
+  <!--controllers-->
+  <script type="text/javascript" src="./controllers/standingsController.js"></script>
+  <script type="text/javascript" src="./controllers/playersController.js"></script>
+  <script type="text/javascript" src="./controllers/schedulesController.js"></script>
 
 </body>
+
 </html>

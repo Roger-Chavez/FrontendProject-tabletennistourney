@@ -1,51 +1,16 @@
 <div class="showContainer">
-    <div class="row">
-        <div class="showCard col-xs-offset-1 col-xs-9">
-            <div class="col-xs-4">
-                <div class="showUser">
+    <div class="showCard ">
+        <div>
+            <div class="showUser">
+                <div class="userPic">
                     <h1> {{player.firstName}} {{player.lastName}} </h1>
-                    <div class="userPic">
-                        <img class="showImg" src="{{player.img}}" alt="userImg" />
-                    </div>
-                </div>
-            </div>
-            <div class="showInfo inside col-xs-7">
-                <div class="row col-container">
-                    <div class="columnSort col-xs-12">
-                        <h1>Player Stats: </h1>
-                    </div>
-                </div>
-                <div class="row col-container">
-                    <div class="col-xs-6">
-                        <p><span><strong>Elo Score: </strong></span>{{player.eloRank}} </p>
-                    </div>
-                    <div class="col-xs-6">
-                        <p><span><strong>Player Win Percentage: </strong></span>{{player.winLossRatio()}} </p>
-                    </div>
-                </div>
-                <div class="row col-container">
-                    <div class="col-xs-6">
-                        <p><span><strong>Email: </strong>(Please don't email me, this is just for decoration) </span>{{ player.email
-                            }}
-                        </p>
-                    </div>
-                    <div class="col-xs-6">
-                        <p><span><strong>Date of Birth: </strong></span>{{ player.dob | date: 'MMMM d, yyyy' }}</p>
-                    </div>
-                </div>
-                <div class="row col-container">
-                    <div class="col-xs-6">
-                        <p><span><strong>Gender: </strong></span> {{ player.gender}}</p>
-                    </div>
-                    <div class="col-xs-6">
-                        <p><span><strong>Age: </strong></span> {{ player.age}}</p>
-                    </div>
+                    <img class="showImg" src="{{player.img}}" alt="userImg" />
                 </div>
             </div>
         </div>
-        <div class="showMenu col-xs-2">
+        <div class="showMenu">
             <ul class="showList">
-                <a ui-sref="editPlayer({id: {{player.id}} })">
+                <a ng-click="editPlayer()">
                     <li class="showLinks"><span class="showText">Update</span></li>
                 </a>
                 <a ng-click="deletePlayer()">
@@ -54,13 +19,46 @@
                 <a ng-click="returnToProfiles()">
                     <li class="showLinks"><span class="showText">Go back to profiles</span></li>
                 </a>
-                   <a ng-show = "next" ui-sref = "showPlayer({id: {{(player.id)}} })" >
+                <a ng-show="next" ng-click="showNext(player.id)">
                     <li class="showLinks"><span class="showText">Next</span></li>
                 </a>
-                  <a ng-show = "previous" ui-sref = "showPlayer({id: {{(player.id)}} })" >
-                    <li class="showLinks"><span class="showText">Previous</span></li>
-                </a>  
+                <a ng-show="previous" ng-click="showPrev(player.id)">
+                    <li class="showLinks last-child"><span class="showText">Previous</span></li>
+                </a>
             </ul>
+        </div>
+        <div class="showInfo inside">
+            <div class="col-container">
+                <div class="columnSort">
+                    <h1>Player Stats: </h1>
+                </div>
+            </div>
+            <div class="col-container">
+                <div>
+                    <p><span><strong>Elo Score: </strong></span>{{player.eloRank}} </p>
+                </div>
+                <div>
+                    <p><span><strong>Player Win Percentage: </strong></span>{{player.winLossRatio()}} </p>
+                </div>
+            </div>
+            <div class=" col-container">
+                <div>
+                    <p><span><strong>Email: </strong>(Please don't email me, this is just for decoration) </span>{{ player.email
+                        }}
+                    </p>
+                </div>
+                <div>
+                    <p><span><strong>Date of Birth: </strong></span>{{ player.dob | date: 'MMMM d, yyyy' }}</p>
+                </div>
+            </div>
+            <div class="col-container">
+                <div>
+                    <p><span><strong>Gender: </strong></span> {{ player.gender}}</p>
+                </div>
+                <div>
+                    <p><span><strong>Age: </strong></span> {{ player.age}}</p>
+                </div>
+            </div>
         </div>
     </div>
 </div>

@@ -1,59 +1,57 @@
-<section class="row playerMargin">
-  <div class="col-container">
-    <div class="col-xs-6 playerTextBox">
-      <div class="playersTitle">
-        <h1 class="textMargin">{{ bannerHeader }}</h1>
-        <h2 class="textMargin playerText">{{ bannerMessage }}</h2>
-      </div>
-    </div>
-    <div class="col-xs-6">
-      <div class="form-card">
-        <p class="playerBanner">{{ formBanner }}</p>
-        <form>
-          <fieldset>
-            <div class="row col-container">
-              <div class="col-xs-6">
-                <label>First Name</label>
-                <input type="text" class="form-control" placeholder="First Name" ng-model="player.firstName" />
-                <div ng-if="pleaseEnter">Please enter your firstName</div>
-              </div>
-              <div class="col-xs-6">
-                <label>Last Name</label>
-                <input type="text" class="form-control" placeholder="Last Name" ng-model="player.lastName" />
-                <div ng-if="pleaseEnter2">Please enter your lastName</div>
-              </div>
-            </div>
-            <div class="row col-container">
-              <div class="col-xs-6">
-                <label>Email</label>
-                <input type="text" class="form-control" placeholder="Email" ng-model="player.email">
-              </div>
-              <div class="col-xs-6">
-                <label>Date of birth</label>
-                <input type="Date" class="form-control" ng-model="player.dob ">
-              </div>
-            </div>
-            <div class="row col-container">
-              <div class="col-xs-6">
-                <label>Age</label>
-                <input type="text" class="form-control" placeholder="Age" ng-model="player.age">
-              </div>
-              <div class="col-xs-6">
-                <label>Gender</label>
-                <input type="text" class="form-control" placeholder="Gender" ng-model="player.gender ">
-              </div>
-              <button name="button " type="submit " class="playerbtn btn btn-primary " ng-show="playerButton
-                " ng-click="addPlayer()">
-                    <span>Get your free profile</span>            
+<section class="formWrapper">
+  <div class="formHeader">
+    <h1>{{ bannerHeader }}</h1>
+    <hr/>
+    <h2>{{ bannerMessage }}</h2>
+  </div>
+
+  <div class="clearfix form-card">
+    <p class="playerBanner">{{ formBanner }}</p>
+    <form>
+      <fieldset>
+        <div class="col-container">
+          <div class="inputField">
+            <label>First Name</label>
+            <input type="text" class="form-control" placeholder="First Name" ng-model="player.firstName" />
+            <div class="required" ng-if="pleaseEnter">Please enter your firstName</div>
+          </div>
+          <div class="inputField">
+            <label>Last Name</label>
+            <input type="text" class="form-control" placeholder="Last Name" ng-model="player.lastName" />
+            <div class="required" ng-if="pleaseEnter2">Please enter your lastName</div>
+          </div>
+        </div>
+        <div class="col-container">
+          <div class="inputField">
+            <label>Email</label>
+            <input type="text" class="form-control" placeholder="Email" ng-model="player.email">
+          </div>
+          <div class="inputField">
+            <label>Date of birth</label>
+            <input type="Date" class="form-control" ng-model="player.dob ">
+          </div>
+        </div>
+        <div class="col-container">
+          <div class="inputField">
+            <label>Age</label>
+            <input type="text" class="form-control" placeholder="Age" ng-model="player.age">
+          </div>
+          <div class="inputField">
+            <label>Gender</label>
+            <input type="text" class="form-control" placeholder="Gender" ng-model="player.gender ">
+          </div>
+      </fieldset>
+      <div class="centerContainer">
+        <div class="btnContainer">
+          <button type="submit " class="playerbtn" ng-hide="playerButton" ng-click="addPlayer()">
+                  Get your free profile           
                   </button>
-              <button name="button " type="submit " class="playerbtn2 btn btn-primary " ng-hide="playerButton
-                " ng-click="savePlayer() ">
+          <button name="button" type="submit " class="playerbtn2" ng-show="playerButton" ng-click="savePlayer()" ui-sref="showPlayer({id: {{ currentId }} })">
                       <span>Update Player Info</span>
                   </button>
-            </div>
-          </fieldset>
-        </form>
+        </div>
       </div>
-    </div>
+      </div>
+    </form>
   </div>
 </section>
