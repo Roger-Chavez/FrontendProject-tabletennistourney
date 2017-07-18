@@ -7,11 +7,14 @@ This front-end web app was designed to help organize competitive ping pong playe
 
 |   Technology |   Deployment |       
 |  ----------- | ------------|
-|   Angular JS | heroku |
+|   Angular JS | [heroku](https://tabletennis-app.herokuapp.com/) |
 |   jQuery     ||
 |   HTML       ||
 |   CSS        ||
 |   Sass       ||
+
+<br>
+
 ![Picture goes here](./images/logos.png) 
 <br>
 
