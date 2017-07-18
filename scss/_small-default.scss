@@ -1,0 +1,383 @@
+/* Prevents adjustments of font size after orientatioin changes IE on Windows Phone in iOS.  */
+
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+
+/* apply a natural box layout model to all elements */
+
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+} // -------------------------------- BODY -------------------------------
+body {
+    font-family: $defaultFont;
+    font-weight: $normalWeight;
+    background-color: #D6E3EC;
+} // ----------------------------------- Header -----------------------------
+header {
+    background-color: $primaryColor;
+    color: #FFF;
+    img.headerLogo {
+        height: 90px;
+        position: absolute;
+    }
+    div.whiteBar {
+        width: 100%;
+        height: 90px;
+        float: right;
+        nav.topMenu {
+            background-color: $fontColor;
+            width: 30%;
+            float: right;
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+            ul li:last-child {
+                width: 40%;
+                border-left: 1px solid $primaryColor;
+                transition: background 1.0s ease, color 0.75s ease;
+            }
+            ul li {
+                float: left;
+                width: 60%;
+                transition: background 1.0s ease, color 0.75s ease;
+                a {
+                    font-size: 12px;
+                    padding: 10px 0;
+                    display: block;
+                    text-align: center;
+                    font-weight: $boldWeight;
+                    padding: .5rem 0;
+                    text-decoration: none;
+                    transition: background 0.75s ease, color 0.75s ease;
+                }
+            }
+            li:first-child:hover>a {
+                color: $fontColor;
+                background: $secondaryColor;
+                border-top-left-radius: 4px;
+                border-bottom-left-radius: 4px;
+            }
+            li:last-child:hover>a {
+                color: $fontColor;
+                background: $secondaryColor;
+            }
+        }
+    }
+}
+
+nav.mainMenu {
+    background-color: $primaryColor;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    ul li {
+        float: left;
+        width: 25%;
+        border-right: 1px solid rgba(0, 0, 0, 0.4);
+        transition: background 1.0s ease, color 0.75s ease;
+    }
+    ul li:last-child {
+        border-right: none;
+    }
+    ul li a {
+        display: block;
+        text-align: center;
+        font-weight: $boldWeight;
+        font-size: .5rem;
+        padding: .5rem 0;
+        color: $fontColor;
+        text-decoration: none;
+        transition: background 0.75s ease, color 0.75s ease;
+    }
+    ul li a:hover {
+        color: $fontColor;
+        background-color: $secondaryColor;
+    }
+} // ----------------------- Footer -------------------------
+footer {
+    background-color: $primaryLightest;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    ul li {
+        padding-bottom: 10px;
+        list-style: none;
+        float: left;
+        width: 20%;
+        border-right: 1px solid rgba(0, 0, 0, 0.4);
+        transition: background 1.50s ease, color 0.75s ease;
+    }
+    ul li:last-child {
+        border-right: none;
+    }
+    ul li a {
+        display: block;
+        text-align: center;
+        font-weight: $boldWeight;
+        padding: .5rem 0;
+        color: $fontColor;
+        text-decoration: none;
+        transition: background 0.75s ease, color 0.75s ease;
+    }
+    ul li:hover {
+        color: $fontColor;
+        background-color: $secondaryColor;
+    }
+    ul li a:hover {
+        text-decoration: none;
+        color: $fontColor;
+    }
+    figure.photo {
+        height: 55px;
+        img {
+            padding: 0 10px;
+            width: 100%;
+            height: 30px;
+            font-weight: 300;
+            font-size: x-small;
+            margin-top: 10px;
+        } // ----------- footer logo images loaded here -------------
+        img.logo1 {
+            content: url(../images/microsoftLogoSmall.png);
+            width: 90%;
+        }
+        img.logo2 {
+            content: url(../images/chaseLogoSmall.png);
+        }
+        img.logo3 {
+            content: url(../images/killerspinLogoSmall.png);
+        }
+        img.logo4 {
+            content: url(../images/butterflyLogoSmall.png);
+        }
+        img.logo5 {
+            content: url(../images/stigaLogoSmall.png);
+            width: 90%;
+        }
+        figcaption {
+            text-align: center;
+            font-size: 8px;
+            font-weight: 300;
+            white-space: nowrap;
+        }
+    }
+} //----------------------- home page/ user form -----------------------
+section.formWrapper {
+    width: 100% - $gutterdbl;
+    margin: 1rem $gutter;
+    background-color: #D6E3EC;
+    div.formHeader {
+        text-align: center;
+        background: $primaryLightest;
+        border-radius: 4px;
+        >hr {
+            border-top: 1px solid $primaryColor;
+        }
+    }
+    h1 {
+        font-size: 1.4rem;
+        font-weight: $normalWeight;
+        padding: 12px;
+        color: $fontColor;
+    }
+    h2 {
+        font-size: 1rem;
+        font-weight: $normalWeight;
+        padding: 12px;
+        color: $fontColor;
+    }
+    div.form-card {
+        form div.centerContainer {
+            height: 110px;
+            div.btnContainer {
+                height: 65px;
+                width: 50%;
+                margin: 0 auto;
+            }
+            button.playerbtn {
+                margin-top: 21px;
+                background-color: $primaryColor;
+                border: none;
+                border-radius: 4px;
+                color: $fontColor;
+                height: 65px;
+                width: 100%;
+                transition: border 0.75s ease, background 0.75s ease, color 0.75s ease;
+            }
+            button.playerbtn2 {
+                margin-top: 21px;
+                background-color: $secondaryColor;
+                border: none;
+                border-radius: 4px;
+                color: white;
+                height: 65px;
+                width: 100%;
+                transition: border 0.75s ease, background 0.75s ease, color 0.75s ease;
+            }
+            button.playerbtn:hover {
+                background-color: lighten($primaryColor, 20%);
+                color: black;
+                font-weight: $normalWeight;
+                border: 1px solid black;
+            }
+            button.playerbtn2:hover {
+                background-color: lighten($secondaryColor, 20%);
+                color: black;
+                font-weight: 600;
+                border: 2px solid black;
+            }
+        }
+    }
+    div.form-card>div {
+        margin: 0 auto;
+    }
+    p.playerBanner {
+        padding-top: 7px;
+        text-align: center;
+        width: 80%;
+        margin: 0 auto;
+        font-size: 1.2rem;
+        background-color: $primaryLighter;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        height: 34px;
+        color: $fontColor;
+    }
+    div.col-container>div {
+        text-align: center;
+        input {
+            border: 1px solid $secondaryColor;
+            text-align: center;
+            width: 80%;
+            margin: 0 auto;
+        }
+    }
+    div.col-container div>label {
+        margin: 5px;
+    }
+    div.required {
+        margin: 5px;
+        color: red;
+        font-size: .8rem;
+        font-weight: 600;
+    }
+} // ----------------------- Players index------------------------
+div.searchBarCol>input {
+    border: 1px solid $primaryColor;
+    border-radius: 5px;
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+div.searchBarCol>h3 {
+    margin: 10px 0;
+    text-align: center;
+}
+
+div.searchBarCol>hr {
+    border-top: 1px solid $primaryColor;
+}
+
+div.displayPlayers {
+    width: 90%;
+    margin: 0 auto;
+}
+
+div.playerDisplay {
+    background: $primaryLightest;
+    text-align: center;
+    width: 100%;
+    border: 1px solid $secondaryColor;
+    margin: 10px auto;
+    border-radius: 5px;
+    padding: 12px;
+    color: black;
+    h2.text-center {
+        color: $fontColor;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+    div>a:hover {
+        text-decoration: none;
+    }
+} // ---------------------- Show players Page --------------------
+div.userPic {
+    >h1 {
+        background: $primaryLightest;
+        color: $fontColor;
+        text-align: center;
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 10px;
+        height: 30px;
+        padding-top: 5px;
+        font-weight: 500;
+        font-size: 1.3rem;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        border-top: 1px solid $secondaryColor;
+        border-left: 1px solid $secondaryColor;
+        border-right: 1px solid $secondaryColor;
+    }
+}
+
+img.showImg {
+    border-bottom: 1px solid $secondaryColor;
+    border-left: 1px solid $secondaryColor;
+    border-right: 1px solid $secondaryColor;
+    width: 80%;
+    height: 200px;
+    margin: 0 auto;
+    display: block;
+}
+
+div.showMenu {
+    width: 80%;
+    margin: 0 auto;
+    display: table;
+    ul.showList {
+        list-style: none;
+        text-align: center;
+        >a:last-child li {
+            border-bottom-left-radius: 4px;
+            border-bottom-right-radius: 4px;
+        }
+    }
+    li.showLinks {
+        border: 1px solid $secondaryColor;
+        height: 35px;
+        background: $primaryLighter;
+        color: white;
+        padding-top: 10px;
+    }
+    li.showLinks {
+        border-top: none;
+    }
+}
+
+div.showInfo {
+    background: white;
+    padding: 5% 10%;
+    div.col-container {
+        div>h1 {
+            font-size: 1.5rem;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        >div {
+           margin: 10px;
+           font-weight: 400;
+        }
+    }
+}
+
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}

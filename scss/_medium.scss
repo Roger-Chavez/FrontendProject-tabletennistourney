@@ -1,0 +1,352 @@
+    // **************** Index page ***************************
+    header {
+        background-color: $primaryColor;
+        color: #FFF;
+        width: 100%;
+        img.headerLogo {
+            height: 130px;
+        }
+        div.whiteBar {
+            width: 100%;
+            height: 83px;
+            float: right;
+            background: white;
+            nav.topMenu {
+                background-color: $primaryColor;
+                width: 25%;
+                float: right;
+                border-top-left-radius: 4px;
+                border-bottom-left-radius: 4px;
+                ul li:last-child {
+                    width: 40%;
+                }
+                ul li {
+                    float: left;
+                    width: 60%;
+                    a {
+                        color: $fontColor;
+                        font-size: 16px;
+                        display: block;
+                        text-align: center;
+                        font-weight: 600;
+                        padding: .5rem 0;
+                        text-decoration: none;
+                        transition: background 0.75s ease, color 0.75s ease;
+                    }
+                }
+                li:first-child:hover>a {
+                    color: $secondaryColor;
+                    background: $fontColor;
+                    border-top-left-radius: 4px;
+                    border-bottom-left-radius: 4px;
+                }
+                li:last-child:hover>a {
+                    color: $secondaryColor;
+                    background: $fontColor;
+                }
+            }
+        }
+    }
+
+    nav.mainMenu {
+        width: 100%;
+        background-color: $primaryColor;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+        ul {
+            width: 85%;
+            float: right;
+        }
+        ul li {
+            float: left;
+            width: 25%;
+            border-right: 1px solid rgba(0, 0, 0, 0.4);
+        }
+        ul li:last-child {
+            border-right: none;
+        }
+        ul li a {
+            height: 46px;
+            display: block;
+            text-align: center;
+            font-weight: $normalWeight;
+            font-size: 1.2rem;
+            padding: .8rem 0;
+            color: $fontColor;
+            text-decoration: none;
+            transition: background 0.75s ease, color 0.75s ease;
+        }
+        ul li a:hover {
+            color: $fontColor;
+            background-color: $secondaryColor;
+        }
+    } // ----------------------- Footer -------------------------
+    footer {
+        width: 100%;
+        background-color: $primaryLightest;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+        ul li {
+            list-style: none;
+            float: left;
+            width: 20%;
+            border-right: 1px solid rgba(0, 0, 0, 0.4);
+        }
+        ul li:last-child {
+            border-right: none;
+        }
+        ul li a {
+            display: block;
+            text-align: center;
+            font-weight: $boldWeight;
+            margin-bottom: 5px;
+            color: $fontColor;
+            text-decoration: none;
+        }
+        ul li a:hover {
+            color: black;
+            font-weight: 700;
+        }
+        figure.photo {
+            padding: 0 10px;
+            height: 55px;
+            img {
+                width: 100%;
+                height: 50px;
+                font-weight: 300;
+                font-size: x-small;
+                margin-top: 0;
+            } // ----------- footer logo images loaded here -------------
+            img.logo1 {
+                content: url(../images/microsoftLogo.png);
+                width: 135px;
+            }
+            img.logo2 {
+                content: url(../images/chaseLogo.png);
+                width: 80px;
+                padding-bottom: 3px;
+            }
+            img.logo3 {
+                content: url(../images/killerspinLogo.png);
+                width: 100%;
+                padding-top: 10px;
+            }
+            img.logo4 {
+                content: url(../images/butterflyLogo.png);
+                width: 100%;
+                padding-top: 18px;
+                padding-bottom: 2px;
+            }
+            img.logo5 {
+                content: url(../images/stigaLogo.png);
+                width: 80px;
+                padding-top: 18px;
+                padding-bottom: 5px;
+            }
+            figcaption {
+                font-size: 14px;
+                font-weight: 300;
+                white-space: nowrap;
+            }
+        }
+    } // ---------------- home view page/ user Form -----------------------
+    section.formWrapper {
+        width: 100%;
+        height: 800px;
+        margin: 0 auto;
+        background-image: url(../images/table_t.png);
+        background-size: 313px;
+        div.formHeader {
+            width: 76%;
+            height: 250px;
+            margin: 0 auto;
+            margin-top: 5px;
+            border-radius: 0;
+            border: 1px solid $primaryColor;
+            border-bottom: none;
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+        }
+        h1 {
+            font-size: 1.6rem;
+            font-weight: 400;
+            padding: 17px;
+            color: $fontColor;
+            height: 75px;
+        }
+        h2 {
+            font-size: 1.3rem;
+            font-weight: $normalWeight;
+            padding: 30px;
+            color: $fontColor;
+        }
+        div.form-card {
+            width: 76%;
+            clear: right;
+            margin: 0 auto;
+        }
+        div.form-card form div.centerContainer button.playerbtn {
+            margin-top: 30px;
+            width: 100%;
+            height: 65px;
+        }
+        p.playerBanner {
+            padding-top: 20px;
+            text-align: center;
+            width: 100%;
+            margin: 0 auto;
+            font-size: 1.2rem;
+            background-color: $primaryLighter;
+            border-radius: 0;
+            height: 65px;
+            color: $fontColor;
+        }
+        fieldset {
+            border: 1px solid $primaryColor;
+            border-top: none;
+            background: white;
+            border-bottom-left-radius: 4px;
+            border-bottom-right-radius: 4px;
+        }
+        div.col-container {
+            padding-top: 20px;
+            height: 110px;
+        }
+        div.inputField {
+            width: 50%;
+            float: left;
+            text-align: center;
+            input {
+                text-align: center;
+                width: 80%;
+                margin: 0 auto;
+            }
+        }
+        div.inputField>label {
+            margin: 5px;
+        }
+        div.required {
+            margin: 5px;
+            color: red;
+            font-size: .8rem;
+            font-weight: 600;
+        }
+    } // ----------------------- Players ------------------------
+    div.searchBarCol>input {
+        border: 2px solid $primaryColor;
+        font-size: 1.2rem;
+    }
+
+    div.searchBarCol>h3 {
+        font-size: 1.4rem;
+    }
+
+    div.searchBarCol>hr {
+        border-top: 2px solid $primaryColor;
+    }
+
+    div.displayPlayers {
+        width: 90%;
+        margin-left: 8%; 
+    }
+
+    div.playerDisplay {
+        background: $primaryLightest;
+        text-align: center;
+        width: 45%;
+        float:left;
+        border: 1px solid $secondaryColor;
+        margin: 10px 10px;
+        border-radius: 5px;
+        padding: 12px;
+        color: black;
+        height: 200px;
+        h2.text-center {
+            margin: 5px auto;
+            color: $fontColor;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+        div>a:hover {
+            text-decoration: none;
+        }
+        div>p {
+            margin-top: 15px;
+        }
+    }
+     // ---------------------- Show players Page --------------------
+div.userPic {
+    >h1 {
+        background: $primaryLightest;
+        color: $fontColor;
+        text-align: center;
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 10px;
+        height: 30px;
+        padding-top: 5px;
+        font-weight: 500;
+        font-size: 1.3rem;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        border-top: 1px solid $secondaryColor;
+        border-left: 1px solid $secondaryColor;
+        border-right: 1px solid $secondaryColor;
+    }
+}
+
+img.showImg {
+    border-bottom: 1px solid $secondaryColor;
+    border-left: 1px solid $secondaryColor;
+    border-right: 1px solid $secondaryColor;
+    width: 80%;
+    height: 200px;
+    margin: 0 auto;
+    display: block;
+}
+
+div.showMenu {
+    width: 80%;
+    margin: 0 auto;
+    display: table;
+    ul.showList {
+        list-style: none;
+        text-align: center;
+        >a:last-child li {
+            border-bottom-left-radius: 4px;
+            border-bottom-right-radius: 4px;
+        }
+    }
+    li.showLinks {
+        border: 1px solid $secondaryColor;
+        height: 35px;
+        background: $primaryLighter;
+        color: white;
+        padding-top: 10px;
+    }
+    li.showLinks {
+        border-top: none;
+    }
+}
+
+div.showInfo {
+    background: white;
+    padding: 5% 10%;
+    div.col-container {
+        div>h1 {
+            font-size: 1.5rem;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        >div {
+           margin: 10px;
+           font-weight: 400;
+        }
+    }
+}
+
+    /*----- Clearfix: Force an Element not to collapse -----*/
+
+    .clearfix {
+        content: "";
+        display: table;
+        clear: both;
+    }

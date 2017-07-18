@@ -1,13 +1,9 @@
 # Description
 
 This front-end web app was designed to help organize competitive ping pong players at a local level. Players create user profiles that will keep track of their game history, schedule, individual player statistics, and rankings (using a real elo formula).
-
-<br>
 <br>
 
 ## Technologies
-
-
 
 |   Technology |   Deployment |       
 |  ----------- | ------------|
@@ -32,6 +28,7 @@ This front-end web app was designed to help organize competitive ping pong playe
 | losses 	| Number     	| Automatically set to 0 when starting a new account | 0 |
 | Elo Rank	| Number     	| Automatically set to 2000 when starting a new account | 2000 |
 | Img 	| Link     	| A default Img is provided when starting a new account | ![Example image goes here](./images/defaultImg.jpg) |
+<br>
 
 ## Planning and Approach
 For our first front end development project, tasks were delegated and roles were identified as a mutual team decision. The plan consisted of getting the core framwork and fuctions working through angular and then constructing a UX minded Font End. 
