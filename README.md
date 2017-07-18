@@ -11,6 +11,7 @@ This front-end web app was designed to help organize competitive ping pong playe
 |   jQuery     ||
 |   HTML       ||
 |   CSS        ||
+|   Sass       ||
 ![Picture goes here](./images/logos.png) 
 <br>
 
