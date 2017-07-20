@@ -51,7 +51,7 @@
     nav.mainMenu {
         width: 100%;
         background-color: $primaryColor;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+        border-bottom: none;
         ul {
             width: 85%;
             float: right;
@@ -245,14 +245,14 @@
 
     div.displayPlayers {
         width: 90%;
-        margin-left: 8%; 
+        margin-left: 8%;
     }
 
     div.playerDisplay {
         background: $primaryLightest;
         text-align: center;
         width: 45%;
-        float:left;
+        float: left;
         border: 1px solid $secondaryColor;
         margin: 10px 10px;
         border-radius: 5px;
@@ -271,78 +271,222 @@
         div>p {
             margin-top: 15px;
         }
+    } // ---------------------- Show players Page --------------------
+    div.userPic {
+        >h1 {
+            background: $primaryLighter;
+            color: $fontColor;
+            text-align: center;
+            width: 90%;
+            margin: 0 auto;
+            margin-top: 50px;
+            height: 60px;
+            padding-top: 20px;
+            font-weight: 500;
+            font-size: 1.3rem;
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+            border-top: 1px solid $secondaryColor;
+            border-left: 1px solid $secondaryColor;
+            border-right: 1px solid $secondaryColor;
+        }
     }
-     // ---------------------- Show players Page --------------------
-div.userPic {
-    >h1 {
+
+    div.showUser {
+        width: 50%;
+        float: left;
         background: $primaryLightest;
-        color: $fontColor;
-        text-align: center;
-        width: 80%;
-        margin: 0 auto;
-        margin-top: 10px;
-        height: 30px;
-        padding-top: 5px;
-        font-weight: 500;
-        font-size: 1.3rem;
-        border-top-left-radius: 4px;
-        border-top-right-radius: 4px;
-        border-top: 1px solid $secondaryColor;
+    }
+
+    img.showImg {
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+        border-bottom: 1px solid $secondaryColor;
         border-left: 1px solid $secondaryColor;
         border-right: 1px solid $secondaryColor;
+        width: 90%;
+        height: 340px;
+        margin: 0 auto;
+        display: block;
+        margin-bottom: 55px;
     }
-}
 
-img.showImg {
-    border-bottom: 1px solid $secondaryColor;
-    border-left: 1px solid $secondaryColor;
-    border-right: 1px solid $secondaryColor;
-    width: 80%;
-    height: 200px;
-    margin: 0 auto;
-    display: block;
-}
-
-div.showMenu {
-    width: 80%;
-    margin: 0 auto;
-    display: table;
-    ul.showList {
-        list-style: none;
-        text-align: center;
-        >a:last-child li {
-            border-bottom-left-radius: 4px;
-            border-bottom-right-radius: 4px;
-        }
-    }
-    li.showLinks {
-        border: 1px solid $secondaryColor;
-        height: 35px;
-        background: $primaryLighter;
-        color: white;
-        padding-top: 10px;
-    }
-    li.showLinks {
-        border-top: none;
-    }
-}
-
-div.showInfo {
-    background: white;
-    padding: 5% 10%;
-    div.col-container {
-        div>h1 {
-            font-size: 1.5rem;
+    div.showMenu {
+        height: 505px;
+        background: $primaryLightest;
+        width: 50%;
+        margin: 0 auto;
+        display: table;
+        ul.showList {
+            width: 80%;
+            margin-top: 30px;
+            margin-left: 20%;
+            list-style: none;
             text-align: center;
-            margin-bottom: 10px;
+            >a:last-child li {
+                border-bottom-left-radius: 4px;
+                border-bottom-right-radius: 4px;
+            }
         }
-        >div {
-           margin: 10px;
-           font-weight: 400;
+        li.showLinks {
+            border: 0;
+            height: 50px;
+            background: $secondaryColor;
+            color: white;
+            font-weight: 500;
+            padding-top: 10px;
+            margin-bottom: 42px;
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+            font-size: 1.5rem;
         }
     }
-}
 
+    div.showInfo {
+        background: white;
+        padding: 5% 10%;
+        div.col-container {
+            >h1 {
+                font-size: 2.5rem;
+                text-align: center;
+                margin-bottom: 15px;
+            }
+            >div {
+                height: 50px;
+                margin: 15px;
+                font-weight: 500;
+                >p {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    } // ------------------------ schedules page --------------------
+    div#headerBar {
+        background-position: 100% -26px;
+        div>h1 {
+            font-size: 2.1rem;
+            padding-left: 29px;
+        }
+    }
+
+    div.filterContainer {
+        h3 {
+            height: 53px;
+            font-size: 1.6rem;
+        }
+        div {
+            height: 50px;
+        }
+        .dropDownList {
+            height: 35px;
+        }
+        .resetButton {
+            height: 35px;
+        }
+    }
+
+    table.tableHeader {
+        tr>th {
+            font-size: 1rem;
+            >img {
+                background: white;
+                height: 35px;
+                margin-bottom: -5px;
+            }
+        }
+        tr>th:first-child {
+            width: 190px;
+        }
+        tr>th:last-child {
+            font-size: 1rem;
+        }
+    }
+
+    .playerVsPlayer {
+        width: 98px;
+        height: 65px;
+        padding-top: 20px;
+        strong {
+            font-size: 1rem;
+        }
+    }
+
+    .tvChannel {
+        width: 70%;
+    }
+
+    .redWood {
+        font-size: 0.8rem;
+    } // -------------------- standings -----------------------
+    div.containerStandings {
+        h1 {
+            font-size: 1.8rem;
+            height: 65px;
+            padding-top: 15px;
+            margin: 10px 0;
+            border-bottom: 1px solid $secondaryColor;
+            border-top: 1px solid $secondaryColor;
+        }
+    }
+
+    .panel {
+        width: 45%;
+        margin-left: 3%;
+        margin-top: 10px;
+        height: 195px;
+        float: left;
+        margin-top: 50px;
+        margin-left: 3%;
+        h2 {
+            font-size: 1.7rem;
+        }
+        div {
+            margin: 7px auto;
+            width: 60%;
+            height: 25px;
+            padding-top: 3px;
+        }
+    }
+
+    .gameInfo {
+        float: left;
+        width: 45%;
+        margin-left: 5%;
+        margin-bottom: 10px;
+        h2 {
+            font-size: 1.7rem;
+        }
+        input {
+            text-align: center;
+            border: 1px solid $secondaryColor;
+            margin: 0 auto;
+            display: block;
+            border-radius: 4px;
+            width: 25%;
+        }
+        select {
+            text-align: center;
+            text-align-last: center;
+            color: white;
+            background: $primaryColor;
+            margin: 0 auto;
+            display: block;
+            width: 70%;
+            option {
+                text-align: left;
+            }
+        }
+        div.submitScoreDiv {
+            button {
+                margin-top: 10px;
+                color: #fff;
+                background-color: $secondaryColor;
+                border-color: $primaryColor;
+                border-radius: 4px;
+                transition: border 0.75s ease, background 0.75s ease, color 0.75s;
+            }
+        }
+    }
     /*----- Clearfix: Force an Element not to collapse -----*/
 
     .clearfix {

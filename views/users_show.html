@@ -27,11 +27,9 @@
                 </a>
             </ul>
         </div>
-        <div class="showInfo inside">
+        <div class="showInfo">
             <div class="col-container">
-                <div class="columnSort">
                     <h1>Player Stats: </h1>
-                </div>
             </div>
             <div class="col-container">
                 <div>
@@ -48,7 +46,7 @@
                     </p>
                 </div>
                 <div>
-                    <p><span><strong>Date of Birth: </strong></span>{{ player.dob | date: 'MMMM d, yyyy' }}</p>
+                    <p><span><strong>Date of Birth: </strong></span>{{ player.dob | date: 'MMMM dd, yyyy' }}</p>
                 </div>
             </div>
             <div class="col-container">

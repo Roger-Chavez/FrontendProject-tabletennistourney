@@ -1,76 +1,88 @@
-<div id="headerBar">
-  <div class="row">
-    <h1>Fixtures</h1>
+<div class="schedulesWrapper">
+  <div id="headerBar">
+    <div>
+      <h1>Match Schedules</h1>
+    </div>
   </div>
-</div>
-
-<div class="container schedulesBody">
   <!-- (ISAAC) FILTER BOX -->
-  <div class="filterContainer row">
-    <p><u>Filter By Player</u></p>
-    <select class="dropDownList" ng-model="userSearch">
-      <option class="playersList" value="{{a.firstName}}" ng-repeat="a in players">
+  <div class="filterContainer">
+    <h3>Filter By Player</h3>
+    <div>
+      <select class="dropDownList" ng-model="userSearch">
+      <option value="" disabled selected>Select a Player</option>
+      <option class="playersList" value="{{a.firstName}}" ng-repeat="a in players | orderBy:'firstName'">
         {{a.firstName}} {{a.lastName}}
       </option>
     </select>
-    <button ng-click="userSearch = ''" type="button" class=" btn btn-primary restButton">
-      Reset Filters
+    </div>
+    <div>
+      <button ng-click="userSearch = ''" type="button" class="resetButton">
+      Reset Filter
     </button>
+    </div>
   </div>
 
-  <div class="row">
-    <p class="liveStream pull-right">Live stream avaliable</p>
-    <p class="leagueImage col-sm-6 pull-right"></p>
-  </div>
-
-  <div class="row playersMatchList">
-    <span class="col-sm-6 matchDate"><strong>Thursday 18 May 2017</strong></span>
-
-  </div>
-  <ul class="match text text-center">
-
-    <li ng-repeat="i in matchups | filter: userSearch">
-    <span class="PLAY">
-        <strong>
-          {{i.player1.firstName}} {{i.player1.lastName}}
-        </strong>
-        <span class="time">{{ today | date: "shortTime"}}</span>
-        <strong>
-          {{i.player2.firstName}} {{i.player2.lastName}}
-        </strong>
-    </span>
-
-      <span class="">
-        <img src="./images/pongTable.png" alt="" class="tableIcon">
-        <strong>Redwood Code Academy</strong>
-      </span>
-
-      <span class="text-right">Live On</span>
-      <img src="./images/tvLogo.png" class="tvChannle text-right">
-
-    </li>
-    <li></li>
-  </ul>
-
-  <table class="matchTable text text-center" ng-repeat="b in matchups | filter: userSearch">
-    <tr>
-      <td class="playerVsPlayer">
-        <strong>
+  <div class="container schedulesBody" ng-controller="schedulesController">
+    <table class="tableHeader">
+      <tr>
+        <th>Thursday 18 May 2017</th>
+        <th><img src="../images/league.png" alt="league image"></th>
+        <th>Live stream avaliable</th>
+      </tr>
+    </table>
+    <!-- (ISAAC)  TABLE OF GAMES -->
+    <table class="matchTable text text-center table-responsive" ng-repeat="b in matchups | limitTo : 5 : 0 | filter: userSearch ">
+      <tr class="topBorder">
+        <td class="playerVsPlayer">
+          <strong>
           {{b.player1.firstName}} {{b.player1.lastName}}
         </strong></td>
-      <td class="gameTime">
-        <span class="time">{{ today | date: "shortTime"}}</span></td>
-      <td>
-        <strong>
+        <td class="gameTime">
+          <span class="time">{{ today | date: "shortTime"}}</span></td>
+        <td class="playerVsPlayer">
+          <strong>
           {{b.player2.firstName}} {{b.player2.lastName}}
         </strong></td>
-      <td>
-        <img src="./images/pongTable.png" alt="" class="tableIcon">
-        <strong>Redwood Code Academy</strong></td>
-      <td>
-        <span class="text-right">Live On</span>
-        <img src="./images/tvLogo.png" class="tvChannle text-right"></td>
-    </tr>
-  </table>
+        <td>
+          <img src="./images/pongTable.png" alt="" class="tableIcon">
+          <strong class="redWood">Redwood Code Academy</strong></td>
+        <td>
+          <span class=" tvText">Live On</span>
+          <img src="./images/tvLogo.png" class="tvChannel"></td>
+      </tr>
+    </table>
 
+
+    <table class="tableHeader">
+      <tr>
+        <th>Friday 19 May 2017</th>
+        <th><img src="../images/league.png" alt="league image"></th>
+        <th>Live stream avaliable</th>
+      </tr>
+    </table>
+
+
+
+    <table class="matchTable text text-center table-responsive" ng-repeat="a in matchups | limitTo : 3 : 5 | filter: userSearch">
+      <tr class="topBorder">
+        <td class="playerVsPlayer">
+          <strong>
+          {{a.player1.firstName}} {{a.player1.lastName}}
+        </strong></td>
+        <td class="gameTime">
+          <span class="time">{{ today | date: "shortTime"}}</span></td>
+        <td class="playerVsPlayer">
+          <strong>
+          {{a.player2.firstName}} {{a.player2.lastName}}
+        </strong></td>
+        <td>
+          <img src="./images/pongTable.png" alt="" class="tableIcon">
+          <strong class="redWood">Redwood Code Academy</strong></td>
+        <td>
+          <span class="tvText">Live On</span>
+          <img src="./images/tvLogo.png" class="tvChannel"></td>
+      </tr>
+    </table>
+
+  </div>
 </div>
