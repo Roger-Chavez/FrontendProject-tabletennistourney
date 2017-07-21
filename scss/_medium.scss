@@ -10,7 +10,7 @@
             width: 100%;
             height: 83px;
             float: right;
-            background: white;
+            background: $primaryLightest;
             nav.topMenu {
                 background-color: $primaryColor;
                 width: 25%;
@@ -278,10 +278,11 @@
             color: $fontColor;
             text-align: center;
             width: 90%;
+            max-width: 420px;
             margin: 0 auto;
             margin-top: 50px;
-            height: 60px;
-            padding-top: 20px;
+            height: 45px;
+            padding-top: 10px;
             font-weight: 500;
             font-size: 1.3rem;
             border-top-left-radius: 4px;
@@ -293,9 +294,9 @@
     }
 
     div.showUser {
-        width: 50%;
+        width: 60%;
         float: left;
-        background: $primaryLightest;
+        background: #D6E3EC;
     }
 
     img.showImg {
@@ -305,6 +306,7 @@
         border-left: 1px solid $secondaryColor;
         border-right: 1px solid $secondaryColor;
         width: 90%;
+        max-width: 420px;
         height: 340px;
         margin: 0 auto;
         display: block;
@@ -312,14 +314,14 @@
     }
 
     div.showMenu {
-        height: 505px;
-        background: $primaryLightest;
-        width: 50%;
-        margin: 0 auto;
+        height: 490px;
+        background: #D6E3EC;
+        width: 40%;
+        margin: 0;
         display: table;
         ul.showList {
             width: 80%;
-            margin-top: 30px;
+            margin-top: 52px;
             margin-left: 20%;
             list-style: none;
             text-align: center;
@@ -330,15 +332,15 @@
         }
         li.showLinks {
             border: 0;
-            height: 50px;
+            height: 40px;
             background: $secondaryColor;
             color: white;
             font-weight: 500;
-            padding-top: 10px;
-            margin-bottom: 42px;
+            padding-top: 12px;
+            margin-bottom: 30px;
             border-top-left-radius: 4px;
             border-bottom-left-radius: 4px;
-            font-size: 1.5rem;
+            font-size: 1.1rem;
         }
     }
 
@@ -411,6 +413,11 @@
         }
     }
 
+    .tvText {
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
     .tvChannel {
         width: 70%;
     }
@@ -448,7 +455,7 @@
         }
     }
 
-    .gameInfo {
+    .gameLogger {
         float: left;
         width: 45%;
         margin-left: 5%;

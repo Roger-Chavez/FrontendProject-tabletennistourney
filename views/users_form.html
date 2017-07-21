@@ -43,10 +43,10 @@
       </fieldset>
       <div class="centerContainer">
         <div class="btnContainer">
-          <button type="submit " class="playerbtn" ng-hide="playerButton" ng-click="addPlayer()">
+          <button type="submit " class="playerbtn" ng-show="playerButton" ng-click="addPlayer()">
                   Get your free profile           
                   </button>
-          <button name="button" type="submit " class="playerbtn2" ng-show="playerButton" ng-click="savePlayer()" ui-sref="showPlayer({id: {{ currentId }} })">
+          <button name="button" type="submit " class="playerbtn2" ng-hide="playerButton" ng-click="savePlayer()" ui-sref="showPlayer({id: {{ currentId }} })">
                       <span>Update Player Info</span>
                   </button>
         </div>

@@ -9,8 +9,6 @@ header {
     div.whiteBar {
         width: 100%;
         height: 83px;
-        float: right;
-        background: white;
         nav.topMenu {
             background-color: $primaryColor;
             width: 25%;
@@ -81,4 +79,132 @@ nav.mainMenu {
     }
 }
 
+// ----------------------- Footer -------------------------
+footer {
+    background-image: url(../images/footer-left.png), url(../images/footer-right.png);
+    background-repeat: no-repeat;
+    background-position: 0 -55%, 100% 0;
+    border-bottom: none;
+    ul {
+        width: 75%;
+        margin: 100px auto;
+    }
+    ul li:hover {
+        color: $fontColor;
+        background-color: darken($primaryLightest, 10%);
+    }
+}
 
+// ---------------- home view page/ user Form -----------------------
+section.formWrapper {
+    height: 650px;
+    border-bottom: 3px solid $primaryColor;
+    div.formHeader {
+        width: 45%;
+        margin: 0 50px;
+        margin-top: 60px;
+        float: left;
+        background: rgba(110, 159, 209, 0.72);
+        border-bottom: 1px solid $primaryColor;
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+    }
+    div.form-card {
+        width: 45%;
+        clear: none;
+        margin: 58px auto;
+        float: left;
+    }
+    p.playerBanner {
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        font-size: 1.5rem;
+        font-weight: normal;
+    }
+}
+
+//---------------------------- player index ------------------------------
+div.playerDisplay {
+    width: 30%;
+}
+
+//---------------------------- player show -------------------------------
+div.showUser {
+    width: 37%;
+}
+
+div.showMenu {
+    height: 490px;
+    width: 200px;
+    margin-left: 85.3%;
+    position: fixed;
+    background: none;
+    li.showLinks {
+        border-radius: 4px;
+        font-size: 1rem;
+        height: 35px;
+        font-weight: lighter;
+    }
+}
+
+div.showInfo {
+    background: none;
+    div.col-container {
+        div {
+            background: none;
+            width: 25%;
+            float: left;
+            display: inline-flex;
+            p {
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+// --------------------------- schedules --------------------------------
+div.filterContainer {
+    h3 {
+        height: 60px;
+        font-size: 1.9rem;
+    }
+    .dropDownList {
+        width: 50%;
+    }
+    .dropDownList:hover {
+        width: 45%;
+    }
+    .resetButton {
+        width: 50%;
+    }
+    .resetButton:hover {
+        width: 45%;
+    }
+}
+
+.tvChannel {
+    width: 40%;
+}
+
+//---------------- standings -------------------------
+.panel {
+    width: 217px;
+    float: right;
+    margin-left: 77%;
+    position: fixed;
+    margin-top: -10px;
+    clear: right;
+}
+
+.gameLogger {
+    margin-left: 77%;
+    margin-top: 186px;
+    width: 217px;
+    margin-bottom: 10px;
+    position: fixed;
+    z-index: -1;
+}
+
+div.bracketStandings {
+    width: 70%;
+}
