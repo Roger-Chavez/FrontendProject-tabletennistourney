@@ -117,7 +117,8 @@ a {
   padding: 0;
   font-size: 100%;
   vertical-align: baseline;
-  background: transparent; }
+  background: transparent;
+  text-decoration: none; }
 
 /* change colours to suit your needs */
 ins {
@@ -157,10 +158,27 @@ input,
 select {
   vertical-align: middle; }
 
-/* Prevents adjustments of font size after orientatioin changes IE on Windows Phone in iOS.  */
 html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%; }
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s; }
 
 /* apply a natural box layout model to all elements */
 * {
@@ -533,6 +551,14 @@ div.filterContainer {
     color: #0C529B;
     width: 75%; }
 
+td {
+  padding-top: 5px;
+  height: 30px; }
+
+.theader {
+  padding-top: 5px;
+  height: 30px; }
+
 table.tableHeader {
   border-radius: 4px;
   width: 100%;
@@ -554,6 +580,8 @@ table.tableHeader {
     font-size: 0.5rem; }
 
 .playerVsPlayer {
+  margin-top: 5px;
+  padding: 10px 10px;
   width: 85px; }
   .playerVsPlayer strong {
     font-size: 0.8rem; }
@@ -577,6 +605,7 @@ div.containerStandings h1 {
   border-bottom: 1px solid #0C529B; }
 
 .panel {
+  border-radius: 4px;
   border: 1px solid #0C529B;
   text-align: center;
   width: 75%;
@@ -687,6 +716,10 @@ tr.playerRow {
 
 div.bracketStandings {
   margin: 0 10px; }
+  div.bracketStandings table.table {
+    width: 100%;
+    text-align: center;
+    font-weight: 300; }
 
 tr.playerRow:last-child {
   border-bottom: 1px solid #ddd; }
@@ -1120,7 +1153,7 @@ tr.playerRow:last-child {
       height: 83px; }
       header div.whiteBar nav.topMenu {
         background-color: #286BAF;
-        width: 25%;
+        width: 20%;
         float: right;
         border-top-left-radius: 4px;
         border-bottom-left-radius: 4px; }
